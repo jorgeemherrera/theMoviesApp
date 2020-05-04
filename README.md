@@ -33,7 +33,7 @@ In your IDE or preferred code editor open the project (VS Code)
 
 ## 5. Run the DataBase
 
-* Run the command `npm run api` to run the database.json API that would consult and add new movies.
+* Run the command `npm run api` in the console to run the database.json API that would consult and add new movies.
 
 [Jorge Eliécer Muñoz Herrera](https://www.linkedin.com/in/jorgeemherrera/?locale=en_US/).
 ###### 2020
