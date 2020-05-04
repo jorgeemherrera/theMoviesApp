@@ -24,9 +24,9 @@ import { MovieService } from './../services/movie.service';
           [
             style({ opacity: 0, transform: 'translateY(-50px)' }),
             stagger(
-              '50ms',
+              '40ms',
               animate(
-                '500ms ease-in',
+                '300ms ease-in',
                 style({ opacity: 1, transform: 'translateY(0px)' }),
               ),
             ),
@@ -35,7 +35,7 @@ import { MovieService } from './../services/movie.service';
         ),
         query(
           ':leave',
-          [animate('500ms', style({ opacity: 0, transform: 'rotate(90deg)' }))],
+          [animate('300ms', style({ opacity: 0, transform: 'rotate(90deg)' }))],
           {
             optional: true,
           },

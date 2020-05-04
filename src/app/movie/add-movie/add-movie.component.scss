@@ -1,29 +1,43 @@
 $red: #e94057;
-form {
-  max-width: 500px;
-  margin: 0px auto;
-  padding: 20px;
-}
-
-input, textarea {
-  margin: 20px 10px;
-  width: 90%;
-  border: 0px;
-  font-size: 18px;
-  font-family: 'Roboto', sans-serif;
-  padding: 5px;
-  box-shadow: 5px 5px 0px $red;
-}
+$dark-red: #4b1018;
+$white: #FFFFFF;
 
 button {
-  border: 0px;
-  padding: 10px;
-  font-size: 18px;
+  background-color: $red;
+  border: 0rem;
   border-radius: .5rem;
+  color: $white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  padding: 1rem;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    color: $dark-red;
+  }
+}
+.center {
+  margin: 3rem 0rem;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+form {
   margin: 0px auto;
+  max-width: 500px;
+  padding: 20px;
 }
 h1 {
-  text-align: center;
   color: $red;
   font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+input, textarea {
+  border: 0px;
+  box-shadow: 5px 5px 0px $red;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  margin: 20px 10px;
+  padding: 5px;
+  width: 90%;
 }

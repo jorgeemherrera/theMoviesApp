@@ -34,6 +34,14 @@
       "release": "07/06/1994",
       "description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other history unfold through the perspective of an Alabama man with an IQ of 75.",
       "image": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY268_CR1,0,182,268_AL_.jpg"
+    },
+    {
+      "title": "Vanilla Sky",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51vJpudilhL._AC_.jpg",
+      "genre": "Thriller",
+      "release": "1999-02-01",
+      "description": "Un accidente de auto deja a un mujeriego lisiado y acusado de asesinato en esta alucinante versión de \"Abre los Ojos\".",
+      "id": 6
     }
   ]
 }
