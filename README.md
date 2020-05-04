@@ -1,27 +1,39 @@
-# TheMoviesApp
+# Movies App: Angular application with API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.0.
+This project is created in Angular, with the consumption of an API that contains a list of colors in objects.
 
-## Development server
+## Technologies used:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Angular CLI
+* SCSS
+* JSON
+* Bootstrap 4
 
-## Code scaffolding
+## Installation Steps
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### 1. Clone the repository
 
-## Build
+In a console (CMD or Git Bash) on your computer run the following command:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`git clone https://github.com/jorgeemherrera/theMoviesApp.git`
 
-## Running unit tests
+#### 2. Open project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In your IDE or preferred code editor open the project (VS Code)
 
-## Running end-to-end tests
+#### 3. Dependencies install
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+* If you are using Visual Studio Code, open the console of this editor with `ctrl / ⌘ + ñ`
+* run the following command: `npm install` <- the above command will install the node packages (node_modules) with the necessary dependencies to run the application
 
-## Further help
+#### 4. Run the application
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Run the command `ng serve -o` to open the project in your default browser
+* Local URL: `http: // localhost: 4200 /`.
+
+## 5. Run the DataBase
+
+* Run the command `npm run api` to run the database.json API that would consult and add new movies.
+
+[Jorge Eliécer Muñoz Herrera](https://www.linkedin.com/in/jorgeemherrera/?locale=en_US/).
+###### 2020
