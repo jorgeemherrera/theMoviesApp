@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavbarService } from 'src/app/navbar/services/navbar.service';
 import { MovieService } from './../services/movie.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-add-movie',
@@ -15,6 +16,7 @@ export class AddMovieComponent implements OnInit {
     image: new FormControl('', [Validators.required]),
     genre: new FormControl('', [Validators.required]),
     release: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required])
   });
 
   constructor(
@@ -22,6 +24,8 @@ export class AddMovieComponent implements OnInit {
     private movieService: MovieService,
     private navbarService: NavbarService,
   ) {}
+
+  title = 'Add Movie';
 
   ngOnInit() {
     this.navbarService.title.next('Add Movies');

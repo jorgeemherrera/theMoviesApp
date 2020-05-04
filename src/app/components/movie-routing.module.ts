@@ -12,6 +12,10 @@ const routes: Routes = [
     component: MovieListComponent,
   },
   {
+    path: 'top',
+    component: TopFiveComponent
+  },
+  {
     path: 'add',
     component: AddMovieComponent,
   },

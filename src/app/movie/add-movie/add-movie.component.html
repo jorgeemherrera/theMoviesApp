@@ -1,8 +1,10 @@
+<h1>{{ title }}</h1>
+
 <form [formGroup]="movieForm" (ngSubmit)="addMovie()">
   <input type="text" placeholder="Title" formControlName="title" />
-  <input type="text" placeholder="Image URL" formControlName="image" />
+  <input id="image" type="text" placeholder="Image URL" formControlName="image"/>
   <input type="text" placeholder="Genre" formControlName="genre" />
   <input type="date" placeholder="Release Year" formControlName="release" />
-
+  <textarea type="" placeholder="Description" formControlName="description"></textarea>
   <button [disabled]="!movieForm.valid" type="submit">Add</button>
 </form>

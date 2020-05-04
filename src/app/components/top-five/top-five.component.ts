@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/movie/services/movie.service';
-import { NavbarService } from '../navbar/services/navbar.service';
+import { NavbarService } from '../../navbar/services/navbar.service';
 
 @Component({
   selector: 'app-top-five',
