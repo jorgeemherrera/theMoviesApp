@@ -1,4 +1,4 @@
- <ul *ngIf="movies$ | async as movies; else loading" [@listAnimation]="movies">
+ <ul *ngIf="movies$ | async as movies; else loading">
   <li *ngFor="let movie of movies">
     <a [routerLink]="movie.id">
       <img [src]="movie.image" />
@@ -11,8 +11,7 @@
   <ul [@listAnimation]="loadingMovies.length">
     <li
       *ngFor="let movie of loadingMovies"
-      [@listAnimation]="loadingMovies.length"
-    >
+      [@listAnimation]="loadingMovies.length">
       <img src="/assets/movie.png" />
     </li>
   </ul>

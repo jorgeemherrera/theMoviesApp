@@ -18,6 +18,7 @@ export class TopFiveComponent implements OnInit {
   ngOnInit() {
     this.movieService.getTopMovies().subscribe(res => {
       this.movies = res['movies'];
+      console.log(this.movies);
     });
     this.navbarService.title.next('The Movies App!');
   }
