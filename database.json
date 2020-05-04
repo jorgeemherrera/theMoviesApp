@@ -1,13 +1,6 @@
 {
   "movies": [
     {
-      "id": 1,
-      "title": "Home Alone 2",
-      "release": "11/20/1992",
-      "description": "One year after Kevin McCallister was left home alone and had to defeat a pair of bumbling burglars, he accidentally finds himself stranded in New York City - and the same criminals are not far behind.",
-      "image": "https://m.media-amazon.com/images/M/MV5BNDI1MzM0Y2YtYmIyMS00ODE3LTlhZjEtZTUyNmEzMTNhZWU5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
-    },
-    {
       "id": 2,
       "title": "Life is Beatiful",
       "release": "02/12/1997",

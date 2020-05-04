@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { delay } from 'rxjs/operators';
+import { Observable, of, throwError } from 'rxjs';
+import { delay, catchError, tap, map } from 'rxjs/operators';
 import { Movie, movies } from '../models/movie.model';
 
 @Injectable({
@@ -38,11 +38,18 @@ export class MovieService {
     return this.http.post(this.moviesURL, movie);
   }
   
-  // removeMovie(id: number){
-  //   return this.http.delete(this.moviesURL, id)
-  // }
+  removeMovie(id: number) {
+    return this.http.delete<Movie>(`${this.moviesURL}/${id}`)
+    .pipe(tap(status => console.log("status: " + status)),
+    catchError(this.handleError));
+  }
 
   addDelay(obs: Observable<any>) {
     return obs.pipe(delay(1000));
+  }
+
+  private handleError(error: any) {
+    console.error(error);
+    return throwError(error);
   }
 }

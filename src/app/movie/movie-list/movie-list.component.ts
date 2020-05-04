@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 import { NavbarService } from 'src/app/navbar/services/navbar.service';
 import { Movie } from '../models/movie.model';
 import { MovieService } from './../services/movie.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
@@ -45,18 +46,22 @@ import { MovieService } from './../services/movie.service';
   ]
 })
 export class MovieListComponent implements OnInit {
+  movie: Movie[];
   movies$: Observable<Movie[]>;
   loadingMovies: Array<Number>;
 
   constructor(
     private movieService: MovieService,
-    private navbarService: NavbarService,
+    private route: ActivatedRoute,
+    private navbarService: NavbarService
   ) {}
 
   ngOnInit() {
     this.loadingMovies = new Array(10).fill(0).map((n, index) => index);
-
     this.movies$ = this.movieService.getMoviesURL();
     this.navbarService.title.next('The Movies App');
+  }
+  deleteMovie(movie: Movie){
+    this.movieService.removeMovie(movie.id).subscribe();
   }
 }
