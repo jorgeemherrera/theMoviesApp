@@ -1,9 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Movie } from 'src/app/movie/models/movie.model';
-import { Subscription } from 'rxjs';
-import { MovieService } from '../services/movie.service';
-import { NavbarService } from 'src/app/components/navbar/services/navbar.service';
 import { ActivatedRoute } from '@angular/router';
+
+import { Subscription } from 'rxjs';
+
+import { Movie } from 'src/app/movie/models/movie.model';
+import { MovieService } from '../services/movie.service';
+import { NavbarService } from './../../navbar/services/navbar.service';
 
 @Component({
   selector: 'app-movie-item',
