@@ -1,17 +1,16 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MovieService } from 'src/app/movie/services/movie.service';
-import { NavbarService } from '../navbar/services/navbar.service';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, Input } from '@angular/core';
+import { Movie } from 'src/app/movie/models/movie.model';
 import { Subscription } from 'rxjs';
-import { Movie } from '../../movie/models/movie.model';
+import { MovieService } from '../services/movie.service';
+import { NavbarService } from 'src/app/components/navbar/services/navbar.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-movie-item',
+  templateUrl: './movie-item.component.html',
+  styleUrls: ['./movie-item.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
-
+export class MovieItemComponent implements OnInit {
   id: number;
   movie: Movie;
   movieSubs$: Subscription;

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
-import { NavbarService } from './../navbar/services/navbar.service';
-import { MovieService } from './../../services/movie.service';
-import { Movie } from './../../models/movie.model';
+import { MovieService } from '../services/movie.service';
+import { NavbarService } from '../../components/navbar/services/navbar.service';
+import { Movie } from '../models/movie.model';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-movie-detail',
@@ -10,16 +10,14 @@ import { Movie } from './../../models/movie.model';
   styleUrls: ['./movie-detail.component.scss']
 })
 export class MovieDetailComponent implements OnInit {
-  movies: [];
+
+  movies$: Observable<Movie[]>;
   constructor(
     private movieService: MovieService,
     private navbarService: NavbarService) { }
 
   ngOnInit() {
-    let test = this.movieService.getMovies().subscribe(res => {
-      this.movies = res['movies'];
-    });
-    console.log('test', test)
+    this.movies$ = this.movieService.getMovies();
     this.navbarService.title.next('The Movies App!');
   }
 }

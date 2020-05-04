@@ -2,10 +2,11 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <app-movie-detail></app-movie-detail>
+     <router-outlet></router-outlet>
     </div>
     <div class="col-md-8">
-      <app-movie-item></app-movie-item>
+      <button routerLink="/add">Add Movie</button>
+      <app-movie-item [movie]="movie"></app-movie-item>
     </div>
   </div>
 </div>
