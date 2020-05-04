@@ -9,7 +9,7 @@ import { Movie, movies } from '../models/movie.model';
 })
 export class MovieService {
   private moviesTopURL = 'http://www.mocky.io/v2/5dc3c053300000540034757b';
-  private moviesURL = "http://localhost:3000/movies";
+  moviesURL = "http://localhost:3000/movies";
   
   constructor(private http: HttpClient) {}
 
