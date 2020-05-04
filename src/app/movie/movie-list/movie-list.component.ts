@@ -61,7 +61,7 @@ export class MovieListComponent implements OnInit {
     this.movies$ = this.movieService.getMoviesURL();
     this.navbarService.title.next('The Movies App');
   }
-  deleteMovie(movie: Movie){
+  deleteMovie(movie: Movie) {
     this.movieService.removeMovie(movie.id).subscribe();
   }
 }
