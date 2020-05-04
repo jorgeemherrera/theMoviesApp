@@ -1,15 +1,1 @@
-<div *ngIf="movies$ | async as movies">
-  <div class="card mb-3" style="max-width: 30rem;" *ngFor="let movie of movies" [routerLink]="movie.id">
-    <div class="row no-gutters">
-      <div class="col-md-3">
-        <img [src]="movie.image" class="card-img" alt="movie.title">
-      </div>
-      <div class="col-md-7">
-        <div class="card-body">
-          <h4 class="card-title">{{ movie.title }}</h4>
-          <p class="card-text">{{ movie.release }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<app-movie [movie]="movie"></app-movie>

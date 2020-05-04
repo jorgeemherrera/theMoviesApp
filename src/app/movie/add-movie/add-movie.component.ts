@@ -11,10 +11,10 @@ import { MovieService } from './../services/movie.service';
 })
 export class AddMovieComponent implements OnInit {
   movieForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
+    title: new FormControl('', [Validators.required]),
     image: new FormControl('', [Validators.required]),
     genre: new FormControl('', [Validators.required]),
-    releaseYear: new FormControl('', [Validators.required]),
+    release: new FormControl('', [Validators.required]),
   });
 
   constructor(
