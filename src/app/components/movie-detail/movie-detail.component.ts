@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieService } from './../../../../../handsOn/the-movies-app/src/app/movie/services/movie.service';
+
 import { NavbarService } from './../navbar/services/navbar.service';
+import { MovieService } from './../../services/movie.service';
 
 @Component({
   selector: 'app-movie-detail',
@@ -14,12 +15,7 @@ export class MovieDetailComponent implements OnInit {
     private navbarService: NavbarService) { }
 
   ngOnInit() {
-    this.getMovies();
+    this.movieService.getMovies();
     this.navbarService.title.next('The Movies App!');
   }
-
-  getMovies() {
-    this.movieService.getMovies();
-  }
-
 }

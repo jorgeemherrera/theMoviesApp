@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Movie } from '../models/movie.model';
 import { Observable, of } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { Movie } from './../models/movie.model';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,7 @@ export class MovieService {
   getMovies() {
     return this.http.get<Movie[]>(this.moviesURL).subscribe(res => {
       this.movies = res['movies'];
+      console.log('movies', this.movies)
     });//.pipe(this.addDelay);
   }
   movie(id: number) {
