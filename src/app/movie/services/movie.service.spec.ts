@@ -23,14 +23,14 @@ it('should get all movies from Http', () => {
   // Arrange
   const dummyMovies: Movie[] = [
     {
-      id: 10,
+      id: '10',
       title: 'The Mask',
       release: '1994',
       description: 'An ancient mask transforms a drab bank clerk into a smiling Romeo with superhuman powers.',
       image: 'https://images-na.ssl-images-amazon.com/images/I/51zKzNdNcSL._AC_.jpg'
     },
     {
-      id: 11,
+      id: '11',
       title: 'Titanic',
       release: '1997',
       description: 'Movie where DiCaprio dies',
