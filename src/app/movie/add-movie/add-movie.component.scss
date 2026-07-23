@@ -1,6 +1,4 @@
-$red: #e94057;
-$dark-red: #4b1018;
-$white: #FFFFFF;
+@use 'variables' as *;
 
 button {
   background-color: $red;

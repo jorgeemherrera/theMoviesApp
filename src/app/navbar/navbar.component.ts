@@ -3,6 +3,7 @@ import { NavbarService } from './services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
+  standalone: false,
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })

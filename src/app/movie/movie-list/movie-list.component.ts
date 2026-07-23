@@ -15,6 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-list',
+  standalone: false,
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.scss'],
   animations: [

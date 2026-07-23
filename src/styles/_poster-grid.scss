@@ -1,0 +1,21 @@
+@mixin layout {
+  img {
+    height: 400px;
+    max-width: 200px;
+    object-fit: cover;
+  }
+
+  li {
+    list-style: none;
+    margin: 10px;
+    width: 200px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    padding: 20px 0px;
+  }
+}

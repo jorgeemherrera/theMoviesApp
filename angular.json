@@ -34,7 +34,10 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            }
           },
           "configurations": {
             "production": {
@@ -47,7 +50,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -69,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "the-movies-app:build"
+            "buildTarget": "the-movies-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "the-movies-app:build:production"
+              "buildTarget": "the-movies-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "the-movies-app:build"
+            "buildTarget": "the-movies-app:build"
           }
         },
         "test": {
@@ -97,7 +99,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/styles"]
+            }
           }
         },
         "lint": {
@@ -126,6 +131,9 @@
           }
         }
       }
-    }},
-  "defaultProject": "the-movies-app"
+    }
+  },
+  "cli": {
+    "analytics": "ef036bd2-ebaa-42ef-95bc-dcab4ed894b0"
+  }
 }

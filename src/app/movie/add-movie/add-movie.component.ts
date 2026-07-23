@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-add-movie',
+  standalone: false,
   templateUrl: './add-movie.component.html',
   styleUrls: ['./add-movie.component.scss'],
 })

@@ -7,11 +7,12 @@ import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-movie-detail',
+  standalone: false,
   templateUrl: './movie-detail.component.html',
   styleUrls: ['./movie-detail.component.scss'],
 })
 export class MovieDetailComponent implements OnInit, OnDestroy {
-  id: number;
+  id: string;
   movie: Movie;
   movieSub$: Subscription;
 
@@ -22,7 +23,7 @@ export class MovieDetailComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.id = +this.route.snapshot.paramMap.get('id');
+    this.id = this.route.snapshot.paramMap.get('id');
     this.movieSub$ = this.movieService
       .getMoviesId(this.id)
       .subscribe(movie => {

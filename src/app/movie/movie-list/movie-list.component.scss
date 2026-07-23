@@ -1,7 +1,7 @@
-$dark-red: #4b1018;
-$gray: #3d3d3d;
-$red: #e94057;
-$white: #FFFFFF;
+@use 'variables' as *;
+@use 'poster-grid';
+
+@include poster-grid.layout;
 
 button {
   background-color: $white;
@@ -20,22 +20,4 @@ button {
     color: $dark-red;
     box-shadow: 2px 3px 6px $gray;
   }
-}
-img {
-  height: 400px;
-  max-width: 200px;
-  object-fit: cover;
-}
-
-li {
-  list-style: none;
-  margin: 10px;
-  width: 200px;
-}
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0px;
-  padding: 20px 0px;
 }

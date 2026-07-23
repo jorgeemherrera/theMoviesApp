@@ -8,9 +8,8 @@ import { Movie, movies } from '../models/movie.model';
   providedIn: 'root',
 })
 export class MovieService {
-  private moviesTopURL = 'http://www.mocky.io/v2/5dc3c053300000540034757b';
   moviesURL = "http://localhost:3000/movies";
-  
+
   constructor(private http: HttpClient) {}
 
   getMovies() {
@@ -18,7 +17,10 @@ export class MovieService {
   }
 
   getTopMovies() {
-    return this.http.get<Movie[]>(this.moviesTopURL).pipe(this.addDelay);
+    return this.http.get<Movie[]>(this.moviesURL).pipe(
+      map(movies => movies.slice(0, 5)),
+      this.addDelay,
+    );
   }
 
   getMoviesURL() {
@@ -30,15 +32,15 @@ export class MovieService {
     return of(movies.find(movie => +movie.id === +id));
   }
 
-  getMoviesId(id: number) {
+  getMoviesId(id: string) {
     return this.http.get<Movie>(`${this.moviesURL}/${id}`);
   }
 
   addMovie(movie: Movie) {
     return this.http.post(this.moviesURL, movie);
   }
-  
-  removeMovie(id: number) {
+
+  removeMovie(id: string) {
     return this.http.delete<Movie>(`${this.moviesURL}/${id}`)
     .pipe(tap(status => console.log("status: " + status)),
     catchError(this.handleError));
