@@ -34,7 +34,7 @@
     "@eslint/js": "^10.0.1",
     "@types/jasmine": "~6.0.0",
     "@types/node": "^26.1.1",
-    "angular-eslint": "21.4.0",
+    "angular-eslint": "22.1.0",
     "eslint": "^10.3.0",
     "jasmine-core": "~6.3.0",
     "json-server": "^1.0.0-beta.15",
